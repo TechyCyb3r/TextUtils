@@ -1,0 +1,54 @@
+/* The switch container */
+.switch {
+  position: absolute;
+  right: 10px;  /* Position at the right */
+  top: 50%;     /* Center vertically */
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between switch and text */
+}
+
+/* Hide the default checkbox */
+input[type="checkbox"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The label as the slider (the switch itself) */
+.label {
+  position: relative;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 50px;
+  width: 40px;
+  height: 20px;
+  display: inline-block;
+}
+
+/* The slider circle inside the label */
+.label::before {
+  content: "";
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background-color: white;
+  transition: 0.4s;
+  left: 3px;
+  bottom: 3px;
+}
+
+/* When the checkbox is checked, change the background color and move the circle */
+input[type="checkbox"]:checked + label {
+  background-color: lightblue;
+}
+
+input[type="checkbox"]:checked + label::before {
+  transform: translateX(20px);
+}
+/* Text next to switch */
+.switch-text {
+  font-size: 14px;
+}

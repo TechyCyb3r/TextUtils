@@ -1,0 +1,26 @@
+.box{
+    width: 700px;
+    height: 100px;
+}
+.myLable{
+    font: bolder 28px solid black;
+}
+.radius{
+    border-radius: 20px;
+}
+.psize{
+    font-size: 18px;
+}
+@media screen and (max-width: 768px){
+    .box{
+        width: 100%;
+        height: 150px;
+    }
+    .myLable{
+        font: bolder 24px solid black;
+    }
+    .psize{
+        font-size: 16px;
+    }
+    
+}
